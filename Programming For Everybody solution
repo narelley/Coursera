@@ -96,3 +96,26 @@ p = computepay(hrs,rate)
 print("Pay",p)
 
 # Week 7
+largest = None
+smallest = None
+while True:
+    num = input("Enter a number: ")
+    if num == "done" :
+        #print(num)
+        break
+    try:
+        fnum = int(num)
+        #print (fnum)
+        if largest == None and smallest == None:
+            largest = fnum
+            smallest = fnum
+        elif fnum > largest:
+            largest = fnum 
+        elif fnum < smallest:
+            smallest = fnum 
+    except:
+        print ('Invalid input')
+        continue
+        
+print("Maximum:", largest)
+print ("Minimum:", smallest)
