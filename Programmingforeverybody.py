@@ -1,0 +1,98 @@
+
+# Week 2
+hrs = input("Enter Hours:")
+rate = input ("Enter Rates:")
+pay = float(hrs)*float(rate) 
+#pay = hrs*rate
+print ('Pay:' , pay)
+
+# Week 3
+hrs = input("Enter Hours:")
+h = float(hrs)
+rate = input("Enter Rates:")
+r = float(rate)
+
+if h > 40:
+	pay = 40*r + (h-40)*r*1.5
+else:
+    pay = h*r
+    
+print ('Pay:', Pay)
+
+# Week 4
+
+
+# Week 5
+score = input('Enter Score:')
+score = float(score)
+try:
+    if not 0.0 <= score <= 1.0:
+        raise ValueError()
+except ValueError:
+    print('out of range')
+    raise #to raise an exception/ reraise a current exception
+
+if score >= 0.9:
+    print ('A')
+elif score>= 0.8:
+    print ('B')
+elif score>= 0.7:
+    print ('C')
+elif score>= 0.6:
+    print ('D')
+elif score< 0.6:
+    print ('F')
+ -------------------------   
+score = input("Enter Score: ")
+score = float(score)
+try:
+    score in range(0,1) 
+except:
+    print ('Out of range') 
+
+if score >= 0.9:
+    print ('A')
+elif score>= 0.8:
+    print ('B')
+elif score>= 0.7:
+    print ('C')
+elif score>= 0.6:
+    print ('D')
+elif score< 0.6:
+    print ('F')
+    
+else:
+    print ('Out of range')
+    quit()   
+----------------------------
+score = input("Enter Score :")
+try:
+    score = float(score)
+    if not 0.0 <= score <= 1.0:
+        raise ValueError()
+except ValueError:
+    print("Error")
+else:
+    for x, grade in [(0.9, 'A'), (0.8, 'B'), (0.7, 'C'), (0.6, 'D')]:
+        if score >= x:
+            break
+    else:
+        grade = 'F'
+    print(grade)
+ 
+ 
+# Week 6
+def computepay(h,r):
+    if h <= 40:
+        p = h*r
+        return p
+    else:
+        p = 40*r + (h-40)*1.5*r
+        return p
+    
+hrs = float(input("Enter Hours:"))
+rate = float(input("Rate per hours:"))
+p = computepay(hrs,rate)
+print("Pay",p)
+
+# Week 7
